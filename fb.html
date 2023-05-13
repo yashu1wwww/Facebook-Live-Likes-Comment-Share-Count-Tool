@@ -5,33 +5,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-body {
-  background-image: url('https://cdn.pixabay.com/photo/2023/04/30/07/50/bicycle-7959976_960_720.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-    /* Add some basic styles */
-    body {
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-    }
-    input[type="text"] {
-      width: 300px;
-      padding: 5px;
-      margin-right: 10px;
-    }
-    button {
-      padding: 5px 10px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #3e8e41;
-    }
-  </style>
+      body {
+        background-image: url('');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+      }
+      input[type="text"] {
+        width: 100%;
+        max-width: 400px;
+        padding: 5px;
+        margin-right: 10px;
+      }
+      button {
+        padding: 5px 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #3e8e41;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      h3 {
+        font-size: 16px;
+      }
+      .buttons-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border: 2px solid black;
+        border-radius: 10px;
+        transition: background-color 0.3s ease-in-out;
+      }
+      .button:hover {
+        background-color: black;
+        color: white;
+      }
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 20px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+        h3 {
+          font-size: 14px;
+        }
+        .buttons-container {
+          flex-direction: column;
+        }
+      }
+    </style>
 </head>
 <body>
  <p align="center">
@@ -51,7 +96,7 @@ body {
     <h2>Likes: <span id="likes"></span></h2>
     <h3>Shares: <span id="shares"></span><h3>
   </div>
-</center>
+  </center>
 <script>
     function getCounts() {
       // Get the Facebook URL from the input field
@@ -75,7 +120,6 @@ body {
   <div class="buttons-container">
   <a href="mailto:yashwanth6678@gmail.com" class="button">Contact Me</a>
 </div>
-
 <style>
 .buttons-container {
   display: flex;
